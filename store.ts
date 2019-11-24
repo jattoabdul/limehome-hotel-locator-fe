@@ -6,8 +6,6 @@ import {
 } from 'redux';
 import { createLogger } from 'redux-logger';
 import reducers, { initialState } from './reducers';
-// import { composeWithDevTools } from 'redux-devtools-extension';
-// const composeEnhancers = composeWithDevTools({});
 
 const dev: boolean = process.env.NODE_ENV !== 'production';
 
@@ -16,11 +14,10 @@ const { composeWithDevTools } = dev ? require('redux-devtools-extension') : requ
 export type Store = ReduxStore<typeof initialState>;
 
 export default (state = initialState): Store => {
-  const middlewares = dev ? [thunkMiddleware, createLogger()] : [];
+  const middlewares = dev ? [thunkMiddleware, createLogger()] : [thunkMiddleware];
   return createStore(
     reducers,
     state,
     composeWithDevTools(applyMiddleware(...middlewares))
-    // composeEnhancers(applyMiddleware(...middlewares))
   );
 };
