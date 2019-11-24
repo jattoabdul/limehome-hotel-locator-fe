@@ -1,3 +1,5 @@
+## LimeHome Locator
+
 <p align="center">
   <img src="https://i.imgur.com/aKXLOq2.png">
 </p>
