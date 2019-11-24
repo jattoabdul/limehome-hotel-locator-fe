@@ -1,8 +1,7 @@
-const withTypescript = require('@zeit/next-typescript');
 const withSass = require('@zeit/next-sass');
 const withCSS = require("@zeit/next-css");
 
-module.exports = withTypescript(withCSS(withSass({
+module.exports = withCSS(withSass({
    webpack (config, options) {
        config.module.rules.push({
            test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
@@ -16,4 +15,4 @@ module.exports = withTypescript(withCSS(withSass({
 
        return config;
    }
-})));
+}));
