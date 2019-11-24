@@ -7,7 +7,7 @@ import './limehome.scss';
 
 const { publicRuntimeConfig } = getConfig();
 
-const LimeHome= (props) => {
+const LimeHome = (props: any) => {
   const {
     location,
     proximity,
@@ -36,7 +36,7 @@ const LimeHome= (props) => {
     })
     mapCenter = {lat: 6.522500, lng: 3.321350}; // fallback to my home co-ordinates as center
   }
-  
+
   return (
     <React.Fragment>
       <div className="app-wrapper">
