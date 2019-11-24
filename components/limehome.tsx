@@ -1,8 +1,11 @@
 import React from 'react';
 import { compose } from 'recompose';
+import getConfig from "next/config";
 import { usePosition } from 'use-position';
 import SimpleMap from './map';
 import './limehome.scss';
+
+const { publicRuntimeConfig } = getConfig();
 
 const LimeHome= (props) => {
   const {
@@ -42,6 +45,7 @@ const LimeHome= (props) => {
           <form onSubmit={(e) => {
             e.preventDefault();
             setHotels({
+              apiKey: publicRuntimeConfig.gApiKey,
               location:  location.value,
               proximity: proximity.value,
               opennow: true

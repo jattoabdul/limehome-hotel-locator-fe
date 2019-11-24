@@ -15,7 +15,7 @@ export const setHotelsAction = (hotels) => ({ type: HOTELS_SET, hotels });
 export const clearHotels = () => ({ type: HOTELS_CLEAR });
 
 export const setHotels = config => async (dispatch) => {
-  let parameters = `key=AIzaSyBfE6ygYzCDsyohOgUlTj-lN4Npx4GYoKU&location=${config.location}&radius=${config.proximity}&type=lodging&keyword=hotel`;
+  let parameters = `key=${config.apiKey}&location=${config.location}&radius=${config.proximity}&type=lodging&keyword=hotel`;
   return await axios.get(`https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/nearbysearch/json?${parameters}`)
     .then(res => {
       const hotels = res.data;
