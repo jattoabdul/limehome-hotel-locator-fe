@@ -2,6 +2,7 @@ import axios from 'axios';
 import {
   LOCATION_ONCHANGE,
   PROXIMITY_ONCHANGE,
+  SET_MAP_CENTER,
   HOTELS_SET,
   HOTELS_CLEAR,
 } from '../constants/actionTypes';
@@ -9,6 +10,8 @@ import {
 export const onChangeLocation = (location) => ({ type: LOCATION_ONCHANGE, location });
 
 export const onChangeProximity = (proximity) => ({ type: PROXIMITY_ONCHANGE, proximity });
+
+export const setMapCenter = (mapCenter) => ({ type: SET_MAP_CENTER, mapCenter });
 
 export const setHotelsAction = (hotels) => ({ type: HOTELS_SET, hotels });
 
@@ -21,4 +24,13 @@ export const setHotels = config => async (dispatch) => {
       const hotels = res.data;
       dispatch(setHotelsAction(hotels.results));
     })
+};
+
+export const onChangeLocationAndMapCenter = (location) => async (dispatch) => {
+  dispatch(onChangeLocation(location))
+  if (location.value !== '') {
+    dispatch(setMapCenter({
+      value: { lat: Number(location.value.split(',')[0]), lng: Number(location.value.split(',')[1]), }
+    }))
+  }
 };

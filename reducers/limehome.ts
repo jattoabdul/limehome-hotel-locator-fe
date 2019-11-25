@@ -1,6 +1,7 @@
 import {
   LOCATION_ONCHANGE,
   PROXIMITY_ONCHANGE,
+  SET_MAP_CENTER,
   HOTELS_SET,
   HOTELS_CLEAR,
 } from '../constants/actionTypes';
@@ -12,6 +13,9 @@ export const initialState = {
   proximity: {
     value: '',
   },
+  mapCenter: {
+    value: {},
+  },
   hotels: [],
   data: [],
 };
@@ -21,6 +25,7 @@ export default (state = initialState, action) => {
     type,
     location,
     proximity,
+    mapCenter,
     hotels
   } = action;
 
@@ -35,9 +40,12 @@ export default (state = initialState, action) => {
         proximity,
       });
     }
-
+    case SET_MAP_CENTER: {
+      return Object.assign({}, state, {
+        mapCenter,
+      });
+    }
     case HOTELS_SET: {
-      // TODO: check to be sure hotels is an array
       return Object.assign({}, state, {
         hotels: [],
         data: [...hotels],

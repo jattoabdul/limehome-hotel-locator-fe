@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { compose } from 'recompose';
 import getConfig from "next/config";
-import { usePosition } from 'use-position';
 import SimpleMap from './map';
 import './limehome.scss';
 
@@ -11,33 +10,36 @@ const LimeHome = (props: any) => {
   const {
     location,
     proximity,
+    mapCenter,
     data,
-    onChangeLocation,
-    onChangeProximity,
+    onChangeLocationAndMapCenter,
     setHotels,
     clearHotels,
   } = props;
 
+  const getCurrentLocationCordinates = () => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        onChangeLocationAndMapCenter({
+            value: `${position.coords.latitude},${position.coords.longitude}`,
+          })
+       }, (error_message) => {
+        onChangeLocationAndMapCenter({
+          value: '6.522500,3.321350',
+        })
+      }
+      );
+    } else {
+      onChangeLocationAndMapCenter({
+        value: '6.522500,3.321350',
+      })
+    }
+  };
+
   const mapStyles = {height: '100vh', width: '100%'};
 
-  const { latitude, longitude, error } = usePosition(true, {watch: true, enableHighAccuracy: true, timeout: 20000, maximumAge: 1000});
-  let mapCenter;
-  if (location.value === '' && latitude && longitude && !error) {
-    onChangeLocation({
-      value: `${latitude},${longitude}`,
-    })
-  }
-  if (location.value !== '') {
-    mapCenter = {lat: Number(location.value.split(',')[0]), lng: Number(location.value.split(',')[1])};
-  } else {
-    onChangeLocation({
-      value: '6.522500,3.321350',
-    })
-    mapCenter = {lat: 6.522500, lng: 3.321350}; // fallback to my home co-ordinates as center
-  }
-
-  // TODO: make locate me button functional
-  // TODO: style for mobile responsiveness
+  // TODO: add proximity input field and allow users to adjust the value
+  // TODO: write tests
 
   return (
     <React.Fragment>
@@ -50,6 +52,7 @@ const LimeHome = (props: any) => {
             </div>
             <form onSubmit={(e) => {
               e.preventDefault();
+              if (location.value === '') return;
               setHotels({
                 apiKey: publicRuntimeConfig.gApiKey,
                 location:  location.value,
@@ -60,7 +63,7 @@ const LimeHome = (props: any) => {
               <input
                 type="search"
                 value={location.value}
-                onChange={e => onChangeLocation({
+                onChange={e => onChangeLocationAndMapCenter({
                   value: e.target.value,
                 })}
               />
@@ -68,7 +71,7 @@ const LimeHome = (props: any) => {
                 type="submit"
                 value="Locate Nearby Hotels"
               />
-              <img src="/target.svg" alt="return to location" title="Locate me"/>
+              <img onClick={() => getCurrentLocationCordinates()} src="/target.svg" alt="return to location" title="Locate me"/>
             </form>
           </div>
           <div className="hotel-result-list">
@@ -82,7 +85,7 @@ const LimeHome = (props: any) => {
           </div>
         </div>
         <div className="map-wrapper">
-          <SimpleMap mapStyles={mapStyles} locations={data} mapCenter={mapCenter} zoomRate={13} />
+          <SimpleMap mapStyles={mapStyles} locations={data} mapCenter={mapCenter.value} zoomRate={13} />
         </div>
       </div>
     </React.Fragment>

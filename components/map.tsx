@@ -41,7 +41,7 @@ const SimpleMap = (props: any) => {
               lng={hotel.geometry.location.lng}
               name={hotel.name}
               color="blue"
-              // onClick={() => console.log("You clicked me!")}
+              onClick={() => console.log("You clicked me!")}
             />
           )
         }

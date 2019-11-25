@@ -9,12 +9,14 @@ import {
   onChangeProximity,
   setHotelsAction,
   setHotels,
+  onChangeLocationAndMapCenter,
   clearHotels
 } from '../actions';
 import {
   selectLimeHomeLocation,
   selectLimeHomeProximity,
   selectLimeHomeHotels,
+  selectLimeHomeMapCenter,
   selectLimeHomeData,
 } from '../selectors';
 import Page from '../components/page';
@@ -25,14 +27,16 @@ export default compose(
       selectLimeHomeLocation(),
       selectLimeHomeProximity(),
       selectLimeHomeHotels(),
+      selectLimeHomeMapCenter(),
       selectLimeHomeData(),
-      (location, proximity, hotels, data) => ({ location, proximity, hotels, data }),
+      (location, proximity, hotels, mapCenter, data) => ({ location, proximity, hotels, mapCenter, data }),
     ),
     {
       onChangeLocation,
       onChangeProximity,
       setHotelsAction,
       setHotels,
+      onChangeLocationAndMapCenter,
       clearHotels,
     },
   ),

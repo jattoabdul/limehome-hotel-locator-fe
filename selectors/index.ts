@@ -14,6 +14,12 @@ export const selectLimeHomeProximity = () =>
     limeHome => limeHome.proximity,
   );
 
+export const selectLimeHomeMapCenter = () =>
+  createSelector(
+    selectState(),
+    limeHome => limeHome.mapCenter,
+  );
+
 export const selectLimeHomeHotels = () =>
   createSelector(
     selectState(),
