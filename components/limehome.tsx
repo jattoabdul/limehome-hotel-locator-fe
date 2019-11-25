@@ -18,7 +18,7 @@ const LimeHome = (props: any) => {
     clearHotels,
   } = props;
 
-  const mapStyles = {height: '100vh', width: '50vw',};
+  const mapStyles = {height: '100vh', width: '100%'};
 
   const { latitude, longitude, error } = usePosition(true, {watch: true, enableHighAccuracy: true, timeout: 20000, maximumAge: 1000});
   let mapCenter;
@@ -35,6 +35,9 @@ const LimeHome = (props: any) => {
     })
     mapCenter = {lat: 6.522500, lng: 3.321350}; // fallback to my home co-ordinates as center
   }
+
+  // TODO: make locate me button functional
+  // TODO: style for mobile responsiveness
 
   return (
     <React.Fragment>
@@ -65,6 +68,7 @@ const LimeHome = (props: any) => {
                 type="submit"
                 value="Locate Nearby Hotels"
               />
+              <img src="/target.svg" alt="return to location" title="Locate me"/>
             </form>
           </div>
           <div className="hotel-result-list">
@@ -85,5 +89,4 @@ const LimeHome = (props: any) => {
   );
 };
 
-// apiKey: 'AIzaSyBfE6ygYzCDsyohOgUlTj-lN4Npx4GYoKU'
 export default compose()(LimeHome);

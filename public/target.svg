@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 435.2 435.2" style="enable-background:new 0 0 435.2 435.2;" xml:space="preserve" width="512px" height="512px" class=""><g><g>
+	<path style="fill:#00F2A9" d="M163.2,104.8c14.4-7.2,30.4-11.2,46.4-12v-16c-18.4,0.8-36.8,5.6-53.6,13.6L163.2,104.8z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M279.2,90.4c-16.8-8-35.2-12.8-53.6-13.6v16c16,0.8,32,4.8,46.4,12L279.2,90.4z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M90.4,156c-8,16.8-12.8,35.2-13.6,53.6h16c0.8-16,4.8-32,12-46.4L90.4,156z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M104.8,272c-7.2-14.4-11.2-30.4-12-46.4h-16c0.8,18.4,5.6,36.8,13.6,53.6L104.8,272z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M156,344.8c16.8,8,35.2,12.8,53.6,13.6v-16c-16-0.8-32-4.8-46.4-12L156,344.8z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M272,330.4c-14.4,7.2-30.4,11.2-46.4,12v16c18.4-0.8,36.8-5.6,53.6-13.6L272,330.4z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M330.4,163.2c7.2,14.4,11.2,30.4,12,46.4h16c-0.8-18.4-5.6-36.8-13.6-53.6L330.4,163.2z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M344.8,279.2c8-16.8,12.8-35.2,13.6-53.6h-16c-0.8,16-4.8,32-12,46.4L344.8,279.2z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M225.6,386.4v16c96-4,172.8-80.8,177.6-176.8h-16C382.4,312.8,312.8,382.4,225.6,386.4L225.6,386.4z   " data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M209.6,48.8V32C113.6,36,36,113.6,32,209.6h16C52,122.4,122.4,52.8,209.6,48.8z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M386.4,209.6h16c-4-96-80.8-173.6-176.8-177.6v16C312.8,52,382.4,122.4,386.4,209.6L386.4,209.6z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M48.8,225.6H32c4,96,81.6,172.8,177.6,177.6v-16C122.4,382.4,52.8,312.8,48.8,225.6z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M225.6,122.4v16c37.6,4,67.2,33.6,71.2,71.2h16C308.8,163.2,272,126.4,225.6,122.4L225.6,122.4z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M138.4,225.6h-16c4,46.4,40.8,83.2,87.2,87.2v-16C172,292.8,142.4,263.2,138.4,225.6L138.4,225.6z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M209.6,138.4v-16c-46.4,4-83.2,40.8-87.2,87.2h16C142.4,172,172,142.4,209.6,138.4z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+	<path style="fill:#00F2A9" d="M225.6,296.8v16c46.4-4,83.2-40.8,87.2-87.2h-16C292.8,263.2,263.2,292.8,225.6,296.8L225.6,296.8z" data-original="#4C8B7A" class="" data-old_color="#4C8B7A"/>
+</g><g>
+	<path style="fill:#6C7778" d="M209.6,192v33.6v17.6h16v-17.6V192H209.6z" data-original="#3F494A" class="active-path" data-old_color="#3F494A"/>
+	<path style="fill:#6C7778" d="M209.6,209.6H192v16h17.6h16h17.6v-16h-17.6H209.6z" data-original="#3F494A" class="active-path" data-old_color="#3F494A"/>
+	<path style="fill:#6C7778" d="M209.6,76.8v16v29.6v16v26.4h16v-26.4v-16V92.8v-16v-28V32V0h-16v32v16.8V76.8z" data-original="#3F494A" class="active-path" data-old_color="#3F494A"/>
+	<path style="fill:#6C7778" d="M225.6,358.4v-16v-29.6v-16v-26.4h-16v26.4v16v29.6v16v28v16.8v32h16v-32v-16.8V358.4z" data-original="#3F494A" class="active-path" data-old_color="#3F494A"/>
+	<path style="fill:#6C7778" d="M435.2,209.6h-32h-16.8h-28h-16h-29.6h-16h-26.4v16h26.4h16h29.6h16h28h16.8h32V209.6z" data-original="#3F494A" class="active-path" data-old_color="#3F494A"/>
+	<path style="fill:#6C7778" d="M76.8,225.6h16h29.6h16h26.4v-16h-26.4h-16H92.8h-16h-28H32H0v16h32h16.8H76.8z" data-original="#3F494A" class="active-path" data-old_color="#3F494A"/>
+</g></g> </svg>
