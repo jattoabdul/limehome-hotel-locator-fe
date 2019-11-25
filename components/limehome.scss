@@ -1,5 +1,137 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+
 .app-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.list-wrapper {
+  padding: 1rem;
+  padding-top: 10rem;
+  position: relative;
+}
+
+.res {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  padding: 0 1rem;
+}
+
+.header-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
+
+.header-wrapper img {
+  width: 3rem;
+}
+
+.header-wrapper .hambuger {
+  position: relative;
+
+  &, &:before, &:after {
+    background: #000000;
+    width: 2rem;
+    height: 2px;
+  }
+
+  &:before, &:after {
+   content: ' ';
+   position: absolute;
+   left: 0;
+  }
+
+  &:before {
+    top: -0.5rem;
+   }
+
+  &:after {
+    bottom: -0.5rem;
+  }
+}
+
+form {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+
+  input[type="search"] {
+    outline: none;
+    border: #f7f7f7;
+    font-size: 1.75rem;
+    padding: .5rem;
+  }
+
+  input[type="submit"] {
+    margin-left: .5rem;
+    border: none;
+    color: white;
+    background: #00f2a9;
+    padding: .5rem 1rem;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.hotel-result-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 5%;
+  grid-row-gap: 1.5rem;
+  padding: 1rem 2.5%;
+  height: calc(100vh - 12rem);
+  overflow-y: auto;
+  grid-auto-flow: dense;
+
+  /* width */
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #00f2a9;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #014c35;
+  }
+}
+
+.hotel-result-item {
+  img {
+    width: 100%;
+    border-radius: 3px;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.25;
+    margin: 0.5rem 0;
+  }
+  p {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.map-wrapper {}
+
