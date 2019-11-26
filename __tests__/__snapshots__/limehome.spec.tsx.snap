@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components Shallow rendered LimeHome Component should render correctly 1`] = `
+<Fragment>
+  <div
+    className="app-wrapper"
+  >
+    <div
+      className="list-wrapper"
+    >
+      <div
+        className="res"
+      >
+        <div
+          className="header-wrapper"
+        >
+          <img
+            alt="logo"
+            src="/hotel.svg"
+          />
+          <div
+            className="hambuger"
+          />
+        </div>
+        <form
+          onSubmit={[Function]}
+        >
+          <input
+            className="location-input"
+            onChange={[Function]}
+            type="search"
+          />
+          <input
+            type="submit"
+            value="Locate Nearby Hotels"
+          />
+          <img
+            alt="return to location"
+            className="locate-me"
+            onClick={[Function]}
+            src="/target.svg"
+            title="Locate me"
+          />
+        </form>
+      </div>
+      <div
+        className="hotel-result-list"
+      >
+        <div
+          className="hotel-result-item"
+          key="0"
+        >
+          <img
+            alt="hotel img"
+            src="https://d19yo8val8huli.cloudfront.net/hotels/v7/img/featured/exquisite-suites.jpg"
+          />
+          <h2>
+            Test Hotel
+          </h2>
+          <p
+            className="vicinity"
+          >
+            5 ReactNative Road, Next City
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      className="map-wrapper"
+    >
+      <SimpleMap
+        locations={
+          Array [
+            Object {
+              "geometry": Object {
+                "location": Object {
+                  "lat": 7.522392,
+                  "lng": 2.12345,
+                },
+              },
+              "name": "Test Hotel",
+              "vicinity": "5 ReactNative Road, Next City",
+            },
+          ]
+        }
+        mapStyles={
+          Object {
+            "height": "100vh",
+            "width": "100%",
+          }
+        }
+        zoomRate={13}
+      />
+    </div>
+  </div>
+</Fragment>
+`;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import * as React from 'react';
 import { compose } from 'recompose';
 import getConfig from "next/config";
 import SimpleMap from './map';
@@ -62,6 +62,7 @@ const LimeHome = (props: any) => {
             }}>
               <input
                 type="search"
+                className="location-input"
                 value={location.value}
                 onChange={e => onChangeLocationAndMapCenter({
                   value: e.target.value,
@@ -71,7 +72,13 @@ const LimeHome = (props: any) => {
                 type="submit"
                 value="Locate Nearby Hotels"
               />
-              <img onClick={() => getCurrentLocationCordinates()} src="/target.svg" alt="return to location" title="Locate me"/>
+              <img
+                onClick={() => getCurrentLocationCordinates()}
+                className="locate-me"
+                src="/target.svg"
+                alt="return to location"
+                title="Locate me"
+              />
             </form>
           </div>
           <div className="hotel-result-list">
@@ -79,7 +86,7 @@ const LimeHome = (props: any) => {
               <div className="hotel-result-item" key={index}>
                 <img src="https://d19yo8val8huli.cloudfront.net/hotels/v7/img/featured/exquisite-suites.jpg" alt="hotel img"/>
                 <h2>{hotel.name}</h2>
-                <p>{hotel.vicinity}</p>
+                <p className="vicinity">{hotel.vicinity}</p>
               </div>
             ))}
           </div>

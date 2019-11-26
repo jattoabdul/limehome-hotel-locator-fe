@@ -1,0 +1,9 @@
+{
+  "presets": [
+    // "es2015",
+    // "react",
+    // "@babel/preset-env",
+    "next/babel",
+    "@zeit/next-typescript/babel"
+  ]
+}

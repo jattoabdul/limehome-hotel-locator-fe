@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`action creators creates LOCATION_ONCHANGE when changing location text is ongoing 1`] = `
+Array [
+  Object {
+    "location": Object {
+      "value": "6.522500,3.321350",
+    },
+    "type": "LOCATION_ONCHANGE",
+  },
+]
+`;
