@@ -1,7 +1,7 @@
 ## LimeHome Locator
 
 <p align="center">
-  <img src="https://i.imgur.com/tx1GL9d.png">
+  <img src="https://i.imgur.com/F06A6Kz.png">
 </p>
 
 ## Features
