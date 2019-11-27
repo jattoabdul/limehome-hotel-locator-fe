@@ -22,4 +22,7 @@ $ yarn dev (or `npm run dev`)
 # production mode
 $ yarn build (or `npm run build`)
 $ yarn start (or `npm start`)
+
+# to run tests
+$ yarn test (or `npm run test`)
 ```
